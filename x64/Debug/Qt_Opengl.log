@@ -1,0 +1,5 @@
+﻿  moc_Qt_Opengl.cpp
+c:\users\admin\source\repos\qt_opengl\qt_opengl\generatedfiles\ui_qt_opengl.h(1): error C2018: 未知字符“0x3”
+c:\users\admin\source\repos\qt_opengl\qt_opengl\generatedfiles\ui_qt_opengl.h(2): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+c:\users\admin\source\repos\qt_opengl\qt_opengl\generatedfiles\ui_qt_opengl.h(2): error C2146: 语法错误: 缺少“;”(在标识符“WARNING”的前面)
+c:\users\admin\source\repos\qt_opengl\qt_opengl\generatedfiles\ui_qt_opengl.h(6): fatal error C1021: 无效的预处理器命令“OS”

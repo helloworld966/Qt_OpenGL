@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main</class>
+ <widget class="QMainWindow" name="Main">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Qt_Opengl</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Qt_Opengl.qrc">
+    <normaloff>:/Qt_Opengl/icon/atmosphere.svg</normaloff>:/Qt_Opengl/icon/atmosphere.svg</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="axbopenglweight" name="AXBopenglweight">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>671</width>
+      <height>411</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>690</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action"/>
+   <addaction name="actionactclear"/>
+   <addaction name="action1"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="action">
+   <property name="icon">
+    <iconset resource="Qt_Opengl.qrc">
+     <normaloff>:/Qt_Opengl/icon/composite-track-preview.svg</normaloff>:/Qt_Opengl/icon/composite-track-preview.svg</iconset>
+   </property>
+   <property name="text">
+    <string>矩形</string>
+   </property>
+  </action>
+  <action name="actionactclear">
+   <property name="icon">
+    <iconset resource="Qt_Opengl.qrc">
+     <normaloff>:/Qt_Opengl/icon/delete.svg</normaloff>:/Qt_Opengl/icon/delete.svg</iconset>
+   </property>
+   <property name="text">
+    <string>actclear</string>
+   </property>
+  </action>
+  <action name="action1">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Qt_Opengl.qrc">
+     <normaloff>:/Qt_Opengl/icon/color-management.svg</normaloff>:/Qt_Opengl/icon/color-management.svg</iconset>
+   </property>
+   <property name="text">
+    <string>action1</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>axbopenglweight</class>
+   <extends>QOpenGLWidget</extends>
+   <header location="global">axbopenglweight.h</header>
+   <slots>
+    <slot>actdraw()</slot>
+    <slot>clear()</slot>
+    <slot>wireframe()</slot>
+    <slot>slot2()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="Qt_Opengl.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>action</sender>
+   <signal>triggered()</signal>
+   <receiver>AXBopenglweight</receiver>
+   <slot>actdraw()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>267</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionactclear</sender>
+   <signal>triggered()</signal>
+   <receiver>AXBopenglweight</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>267</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action1</sender>
+   <signal>triggered()</signal>
+   <receiver>AXBopenglweight</receiver>
+   <slot>wireframe()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>267</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>actdraw()</slot>
+ </slots>
+</ui>
